@@ -51,6 +51,10 @@ pipeline {
 	        stage('Deploy Tests') {
 	            steps {
 	                echo "Deploying ${BRANCH_NAME} to orchestrator"
+			echo "Logical Name ${UIPATH_ORCH_LOGICAL_NAME} to orchestrator"
+			echo "Folder Name ${UIPATH_ORCH_FOLDER_NAME} to orchestrator"
+			echo "URL ${UIPATH_ORCH_URL} to orchestrator"
+			echo "Tenant Name ${UIPATH_ORCH_TENANT_NAME} to orchestrator"
 	                UiPathDeploy (
 	                packagePath: "Output\\Tests\${env.BUILD_NUMBER}",
 	                orchestratorAddress: "${UIPATH_ORCH_URL}",
