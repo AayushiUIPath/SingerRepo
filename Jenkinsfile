@@ -59,7 +59,7 @@ pipeline {
 	                environments: 'INT',
 			createProcess: true,
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
+	                //credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 	
@@ -83,7 +83,7 @@ pipeline {
 					  traceLevel: 'None',
 					  testResultsOutputPath: "result.xml",
 					  //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "credentialsId"]
-					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
+					  //credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
 					  parametersFilePath: ''
 					)
 	            }
@@ -125,7 +125,7 @@ pipeline {
 	                environments: 'INT',
 			createProcess: true,
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
+	                //credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'APIUserKey'),
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 					)
@@ -154,7 +154,7 @@ pipeline {
 	          echo "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.JOB_DISPLAY_URL})"
 	        }
 	        always {
-	            /* Clean workspace if success */
+	            /* Clean workspace if success*/
 	            cleanWs()
 	        }
 	    }
