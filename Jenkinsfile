@@ -7,7 +7,7 @@ pipeline {
 	        MAJOR = '1'
 	        MINOR = '1'
 	        //Orchestrator Services
-	        UIPATH_ORCH_URL = "https://cloud.uipath.com/uipatgeeiadh/DefaultTenant/orchestrator_/"
+	        UIPATH_ORCH_URL = "https://cloud.uipath.com/uipatgeeiadh/DefaultTenant/orchestrator_"
 	        UIPATH_ORCH_LOGICAL_NAME = "uipatgeeiadh"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
 	        UIPATH_ORCH_FOLDER_NAME = "Shared"
@@ -59,7 +59,7 @@ pipeline {
 	                environments: 'INT',
 			createProcess: true,
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UiPath'),
+	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '84dd5d85-6012-46f7-9663-56ce4851d442'),
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 	
@@ -83,7 +83,7 @@ pipeline {
 					  traceLevel: 'None',
 					  testResultsOutputPath: "result.xml",
 					  //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "credentialsId"]
-					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UiPath'),
+					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '84dd5d85-6012-46f7-9663-56ce4851d442'),
 					  parametersFilePath: ''
 					)
 	            }
@@ -125,7 +125,7 @@ pipeline {
 	                environments: 'INT',
 			createProcess: true,
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: 'UiPath'),
+	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '84dd5d85-6012-46f7-9663-56ce4851d442'),
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 					)
