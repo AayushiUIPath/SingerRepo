@@ -59,7 +59,7 @@ pipeline {
 	                environments: 'INT',
 			createProcess: true,
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}"),
+	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '84dd5d85-6012-46f7-9663-56ce4851d442'),
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 	
@@ -83,7 +83,7 @@ pipeline {
 					  traceLevel: 'None',
 					  testResultsOutputPath: "result.xml",
 					  //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "credentialsId"]
-					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}"),
+					  credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '84dd5d85-6012-46f7-9663-56ce4851d442'),
 					  parametersFilePath: ''
 					)
 	            }
@@ -125,7 +125,7 @@ pipeline {
 	                environments: 'INT',
 			createProcess: true,
 	                //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}"),
+	                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '84dd5d85-6012-46f7-9663-56ce4851d442'),
 					traceLevel: 'None',
 					entryPointPaths: 'Main.xaml'
 					)
